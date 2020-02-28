@@ -1,0 +1,40 @@
+//services section
+
+.services
+  background-color: $clr-dark
+  background-image: url('../.../imgs/services-bg.jpg')
+  color: $clr-light
+  background-size: cover
+  text-align: center
+
+.section__title--services
+  color: $clr-accent
+  position: relative
+
+//position relative for the pseudo element
+
+.section__title--services::after
+  content: ''
+  display: block
+  width: 2em
+  height: 1px
+  margin: 0.5em auto 1em
+  background: $clr-light
+  opacity: 0.25
+
+.service
+  max-width: 500px
+  margin: 0 auto
+
+.container__services
+  margin-bottom: 4em
+
+@media (min-width: 800px)
+  .container__services
+    display: flex
+    max-width: 1000px
+    margin-left: auto
+    margin-right: auto
+
+  .service + .service
+    margin-left: 2em

@@ -1,0 +1,28 @@
+//about section
+.about
+  max-width: 1000px
+  margin: 0 auto
+
+@media (min-width: 800px)
+  .about
+    display: grid
+    grid-template-areas: "title img" "subtitle img" "body img"
+    grid-template-columns: 1fr 200px
+    grid-column-gap: 2em
+
+  .section__title--about
+    grid-area: title
+
+  .section__subtitle--about
+    grid-area: subtitle
+    grid-column: 1/3
+    align-self: start
+    padding-right: 220px
+
+  .about--body
+    grid-area: body
+
+  .about--img
+    grid-area: img
+    position: relative
+    right: 1em
